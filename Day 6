@@ -1,0 +1,1678 @@
+if(condition){
+  
+}else{
+  
+}
+
+try{
+  
+}finally{
+  
+}
+
+//
+  private fun parseProperValue(propName: String, token: Token){
+    when(token){
+      is Token.ValueToken ->
+      callback.visitValue(propName, token.value)
+
+      Token.LBRACE ->{
+        
+      }
+    }
+  }
+  //
+  when (foo){
+    true -> bar()
+    false -> {baz()}
+  }
+  //
+  drawSquare{
+    x  =10, y =10,
+    width = 100, height = 100,
+    fill = true
+  }
+  //
+  val anchor = owner
+?.firstChild!!
+  .siblings(forward = true)
+  .dropWhile{it is PsiComment || it is PsoWhiteSpace}
+
+  //
+  list filter{it > 10}
+
+  fun foo(){
+    ints.forEach lit@{
+    }
+      
+    } 
+  //
+  appendCommaSeparated(properties){prop ->
+  val propertyValue = prop.get(obj)}
+  //
+  foo{ 
+  context: Context,
+  environment: Env
+  ->
+    context.configureEnv(environment)
+  }
+  //
+  class Person(
+    val firstName: String,
+    val lastName: String,
+    val age: int,
+    
+  )
+  //
+  enum class Direction{
+    NORTH,
+    SOUTH,
+    WEST,
+    EAST,
+  }
+  //
+  fun shift(x: Int, y: Int)
+  shift(
+    25,
+    20,
+  )
+  val colors = listOf(
+
+    "red",
+    "green",
+    "blue"
+  )
+  //
+  class Customer(
+    val name: String,
+    val lastName : String,
+  )
+  class Customer(
+    val name: String,
+    lastName: String
+  )
+  //
+  fun powerOf(
+    number: Int,
+    exponent: Int,
+  )
+  constructor(
+    x: Comparable<Number>
+      y: Iterable<Number>
+  ){}
+  fun print(
+    vararg quatity: Int,
+    description: String,
+  ){}
+  //
+  val sum:(Int, Int, Int) -> Int = fun(
+    x,
+    y,
+    z
+  ): Int{
+    return x+ y+ z
+  }
+  println(sum(8,8,8))
+  //
+  class Surface{
+    operator fun get(x: Int, y: Int) = 2*x+4*y-10
+  }
+  fun getZValue(mySurface: Surface, xValue: Int, yValue: Int) = 
+  mySurface[
+    xValue,
+    yValue,
+  ]
+//
+fun main(){
+  val x ={
+    x:Comparable<Number>
+    y: Iterable<Number>
+  -> 
+    println("1")
+  }
+  println(x)
+}
+fun osReferenceApplicable(myReference: KClass <*>) = when(myReference){
+  Comparable::class
+  Iterable::class
+  String::class,
+  ->true
+  else->false
+}
+//
+annotation class ApplicableFor(val services: Array<String>)
+@ApplicableFor({
+  "serializer",
+  "balancer",
+  "database",
+  "inMemoryCache"
+})
+fun run() {}
+//
+fun <T1, T2>foo(){}
+fun main(){
+  foo<
+  Comparable<Number>,
+  Iterable<Number>,
+  >()
+}
+//
+class MyMap<
+  MyKey,
+MyValue,
+> {}
+//
+data class Car(val manufacturer: String, val model: String, val year: Int)
+val myCar = Car("Tesla", "Y", 2019)
+val(
+  manufacturer,
+  model,
+  year,
+) = myCar
+val carrs = listOf<Car>()
+fun printMeanValue(){
+  val meanValue: Int = 0
+  for((
+
+    _,
+    _,
+    year,
+    
+  )in cars)}{
+  meanValue += year
+  }
+println(meanValue/cars.size)
+
+
+}
+printMeanValue()
+//
+fun abs(number: Int)
+
+fun abs(number: Int): Int
+//
+fun foo(){
+  
+}
+//
+println("$name has ${children.size} children")
+//
+fun validateValue(actualValue: String, allowedValues: HashSet<String>){}
+
+fun validataValue(actualValue: String, allowedValues: Set<String>){}
+
+val allowedValues = arrayListOf("a","b","c")
+
+val allowedValues = listOf("a", "b", "c")
+//
+fun foo() = foo("a")
+fun foo(a: String){}
+
+fun foo(a:String = " a")//
+typealias MouseClickHandler = (Any, MouseEvent) -> Unit
+typealies PersonIndex = Map<String, Person>
+  //
+  drawSquare(x =10, y =10, width = 100, height = 100, fill = true)
+//
+  return if(x) foo()else bar()
+
+  return when(x){
+    
+  0->"zero"
+    else -> "nonzero"
+  }
+  //
+  if(x)
+  return foo()
+  else 
+return bar()
+//
+when(x){
+  0 -> return "zero"
+  else -> return "nonzero"
+}
+//
+if(x == null)...else ...file
+when(x){
+  null - >
+   else
+}
+//
+if(x == null)...else
+//
+when(x){
+
+  null -> 
+  else ->
+}
+//
+for( i in 0.. n - 1){}
+for(i in 0..<n)
+
+//
+fun main(){
+  println("""
+          Not
+          trimmed
+          text
+          
+          
+          """)
+
+  println("""
+          Trimmed
+          text
+          """.trimIndent()
+         )
+
+  println()
+
+  val a = """Trimmed to margin text:
+  |if(a > 1) {
+  |  return abstract
+  |}""".trimMargin()
+
+  println(a)
+}
+//
+class Point(val x: Double, val y: Double){
+  companion object{
+    fun fromPolar(angle: Double, radius: Double) = Point(..)
+  }
+}
+//
+fun apiCall(): String = MyJavaApi.getProperty("name")
+
+class Person{
+  val name: String = MyJavaApi.getProperty("name")
+}
+///
+fun main(){
+  val name = MyJavaApi.getProperty("name")
+println(name)
+}
+//
+val one = 1
+val threeBillion = 3000000000
+val oneLone = 1L
+val oneByte: Byte = 1
+//
+val pi = 3.14
+val oneDouble = 1.0
+
+val e = 2.7182818284
+val eFloat = 2.7182818284f
+
+// 
+fun main(){
+  fun printDouble(d: Double){print(d)}
+
+  val i = 1
+  val d = 1.0
+  val f = 1.0f
+
+  printDouble(d)
+}
+//
+val oneMillion = 1_000_000
+val creditCardName = 1234_5678_9012_3456
+val socialSecurityNumber = 999_99_9999:
+val hexBytes = 0xFF_EC_DE_5E
+val bytes = 0b11010010_01101001_10010100_10010010
+//
+fun main(){
+ val a: Int =100
+  val boxedA : Int? = a
+  val anotherBoxedA: Int? = a
+
+  val b: Int = 10000
+  val boxedB: Int? = b
+  val anotherBoxedB: Int? = b
+
+  println(boxedA === anotherBoxedA)
+  println(boxedB === anotherBoxedB)
+}
+//
+fun main(){
+  val b: Int = 10000
+  println(b == b)
+  val boxedB: Int? = b
+  val anotherBoxedB: Int? = b
+  println(boxedB == anotherBoxedB)
+}
+//
+val a: Int? = 1
+val b: Long? = a
+print(b == a)//
+
+fun main(){
+  val b: Byte = 1
+  val i1: Int = b.toInt()
+}
+//
+val l = 1L+3
+
+fun main(){
+  println(1+2)
+  println(2_500_000_000L - 1L)
+  println(3.14 * 2.71)
+  println(10.0 / 3)
+}
+//
+fun main(){
+  val x  = 5/2
+  println(x == 2)
+  
+}
+
+fun main(){
+  val x = 5L / 2
+println(x == 2L)
+}
+//
+fun main(){
+  val x = 5 / 2.toDouble()
+  println(x == 2.5)
+}
+//
+val x = (1 shl 2) and 0x000FF000
+//
+
+fun main(){
+  println(Double.NaN == Double.NaN)
+
+  println(listOf(Double.NaN) == listOf(Double.NaN))
+
+  println(0.0 == -0.0)
+
+  println(listOf(0.0) == listOf(-0.0))
+
+
+  println(listOf(Double.NaN, Double.POSITIVE_INFINITY, 0.0, -0.0).sorted())
+
+}
+//
+val b: UByte = 1u
+val s: UShort = 1u
+val l: ULong = 1u
+
+val a1 = 42u
+val a2 = 0xFFFF_FFFF_FFFFu
+
+//
+val a = 1UL
+
+data class Color(val representation: UInt)
+
+val yellow = Color(0xFFCC00CCu)
+//
+val byteOrderMarkUtf8 = ubyteArrayOf(0xEFu, 0xBBu, 0xBFu)
+//
+fun main(){
+  val myTrue: Boolean = true
+  val myFalse: Boolean = false
+  val boolNull: Boolean? = null
+
+
+  println(myTrue || myFalse)
+  println(myTrue && myFalse)
+  println(!myTrue)
+}
+//
+fun main(){
+  val aChar: Char = 'a'
+
+  println(aChar)
+  println('\n')
+  println('\uFF00
+          ')
+}
+//
+val str = "abcd 123"
+//
+fun main(){
+  val str = "abcd"
+  for(c in str){
+    println(c)
+  }
+}
+
+//
+fun main(){
+   val str = "abcd"
+  println(str.uppercase())
+  println(str)
+}
+//
+fun main(){
+  val s = "abc" + 1
+  println(s + "def")
+}
+//
+val s = "Hello, world!\n"
+
+val text = """
+  for(c in "foo")
+    print(c)
+"""
+//
+val text = """
+  |Tell me and I forget
+  |Teach me and I remember
+  |Involve me and I learn
+  |(Benjamain Franklin)
+  
+""".trimMargin()
+// 
+fun main(){
+  val i = 10
+  println("i = $i")
+}
+//
+fun main(){
+  val s = "abc"
+  println("$s.length is ${s.length}")
+}
+
+val price = """
+${'$'}_9.99
+"""
+//
+fun main(){
+  var riversArray = arrayOf("Nile", "Amazon", " Yangtze")
+
+  riversArray += "Mississippi"
+  println(riversArray.joinToString())
+}
+//
+fun main(){
+  val simpleArray = arrayOf(1,2,3)
+  println(simpleArray.joinToString())
+}
+//
+fun main(){
+  val nullArray: Array<Int?> = arrayOfNulls(3)
+  println(nullArray.joinToString())
+}
+//
+
+var exampleArray = emptyArray<String>()
+var exampleArray: Array<String> = emptyArray()
+
+fun main(){
+  val initArray = Array<int>(3){0}
+  println(initArray.joinToString())
+}
+//
+val asc = Array(5){i -> (i*1).toString()}
+asc.forEach{print(it)
+}
+//
+fun main(){
+  val twoDArray = Array(2) {Array<Int>(2) {0}}
+
+  println(twoDArray.contentDeepToString())
+
+  val threeDArray = Array(3) {Array(3) {Array<Int> (3) {0} } }
+  println(threeDArray.contentDeepToString())
+}
+//
+fun main(){
+
+  val simpleArray = arrayOf(1,2,3)
+  val twoDArray = Array(2) {Array<Int>(2){0}}
+
+simpleArray[0] =10
+  twoDArray[0][0] = 2
+
+  println(simpleArray[0].toString())
+  println(twoDArray[0][0].toString())
+
+}
+//
+fun main(){
+  val lettersArray = arrayOf("c", "d")
+
+  printAllStrings("a", "b", *lettersArray)
+}
+
+fun printAllStrings(vararg strings: String){
+  for(string in strings){
+    print(string)
+  }
+}
+//
+fun main(){
+  val simpleArray = arrayOf(1,2,3)
+  val anotherArray = arrayOf(1,2,3)
+
+  println(simpleArray.contentEquals(anotherArray))
+
+  simpleArray[0] = 10
+  println(simpleArray contentEquals anotherArray)
+
+}
+//
+fun main(){
+  val sumArray = arrayOf(1,2,3)
+
+  println(sumArray.sum())
+}
+//
+fun main(){
+  val simpleArray = arrayOf(1,2,3)
+
+  simpleArray.shuffle()
+  println(simpleArray.joinToString())
+  
+  simpleArray.shuffle()
+  println(simpleArray.joinToString())
+}
+
+fun main(){
+  val simpleArray = arrayOf("a", "b", "c", "d")
+
+  println(simpleArray.toSet())
+
+  println(simpleArray.toList())
+}
+//
+fun main(){
+  val pairArray = arrayOf("apple" to 120, "banana" to 150 "cherry" to 90, " apple" to 140)
+
+  println(pairArray.toMap())
+  
+}
+fun main(){
+  val exampleArray = IntArray(5)
+  println(exampleArray.joinToString())
+}
+//
+if(obj is String){
+  print(obj.length)
+}
+if(obj !is String){
+  print("Not a String")
+}else{
+  print(obj.length)
+}
+//
+fun demo(x: Any){
+  if(x is String){
+    print(x.length)
+  }
+}
+377/1299
+
+if(x !is String)return
+print(x.length)
+
+//
+if(x !is String || x.length == 0)return 
+
+if(x is String && x.length > 0){
+  print(x.length)
+}
+//
+when(x){
+  is Int -> print(x+1)
+  is String -> print(x.length+1)
+  is IntArray -> print(x.sum())
+}
+
+//
+val x: String = y as String
+
+val String? = y as String?
+
+  val x : String? = y as? String
+
+fun main(){
+  val a = 2
+  val b = 3
+
+  var max = a
+  if(a < b) max = b
+
+  if(a > b){
+    max = a
+    
+  }esle{
+    max = b
+  }
+
+
+  max = if(a > b) a else b
+
+
+  val maxLimit = 1
+  val maxOrLimit = if(maxLimit > a) maxLimit else if(a > b) a else by
+  println("max is $max")
+  println("maxOrLimit is $maxOrLimit")
+
+}
+//
+val max = if(a > b){
+  print("Choose a")
+  abstract
+}else{
+  print("Choose b")
+  b
+}
+//
+when(x){
+  1 -> print("x == 1")
+  2 -> print("x == 2")
+
+  else -> {
+    print("x is neither 1 nor 2")
+  }
+}
+//
+enum class Bit{
+  ZERO, ONE
+}
+
+val numericValue = when(getRandomBit()){
+
+  Bit.ZERO -> 0 
+  Bit.ONE -> 1
+}
+//
+
+enum class Color{
+  RED, GREEN, BLUE
+}
+
+when(getColor()){
+  Color.RED -> println("red")
+  Color.GREEN -> println("green")
+  Color.BLUE -> println("blue")
+}
+
+when(getColor()){
+  Color.RED -> println("red")
+  else -> println("not red")
+}
+//
+when(x){
+    0, 1 -> print("x == 0 or x ==1")
+    else -> print("otherwise")
+}
+//
+when(x){
+  s.toInt() -> print("s encodes x")
+  else -> print("s doees not encode x")
+}
+
+// 
+when(x){
+  in 1..10 -> ("x is in the range")
+  in validNumbers -> print("x is valid")
+  !in 10 .. 20 -> print("x is outside the range")
+  else -> print("none of the above")
+
+}
+//
+fun hasPrefix(x: Any) = when(x){
+  is String -> x.startsWith("prefix")
+  else -> false
+}
+//
+
+when{
+  x.isOdd() -> print("x is odd")
+  y.isEven() -> print("y is even")
+  else -> print("x+y is odd")
+}
+//
+fun Request.getBody()=
+  when(val response = executeRequest()){
+    is Success -> response.body
+    is HttpError -> throw HttpException(response.status)
+  }
+  //
+  for(item in collection)print(item)
+  //
+  fot(item: Int in ints){
+    
+  }
+  //
+  fun main(){
+    for(i in 1..3){
+      println(i)
+    }
+    for(i in 6 downTo 0 step 2){
+      println(i)
+    }
+  }
+  //
+  fun main(){
+    val array = arrayOf("a", "b", "c")
+
+    for(i in array.indices){
+      println(array[i])
+    }
+  }
+  //
+  fun main(){
+    val array = arrayOf("a","b","c")
+
+    for((index, value) in array.withIndex())
+    println("the element at $index is $value")
+  }
+}
+//
+while(x > 0){
+  x--
+}
+do{
+  val y = retrieveData()
+  
+}while (y != null)
+//
+val s = person.name?: return 
+
+loop@ for(i in 1..100){}
+
+loop@ for(i in 1..100){
+  for(j in 1..100){
+    if(..)break@loop
+  }
+}
+//
+fun foo(){
+  listOf(1,2,3,4,5).forEach{
+    if(it==3)
+    print(it)
+  }
+  println("this point is unreachable")
+}
+
+fun main()}{
+  foo()
+}
+//
+fun foo(){
+  listOf(1,2,3,4,5).forEach lit@{
+    if(it == 3)return @lit
+    print(it)
+  }
+  print("done with explicit label")
+}
+
+fun main(){
+  foo()
+}
+//
+fun foo(){
+  listOf(1,2,3,4,5).forEach{
+    if(it == 3)return @forEach
+    print(it)
+  }
+  print("done with implicit label")
+}
+fun main(){
+  foo()
+}
+//
+fun foo(){
+  listOf(1,2,3,4,5).forEach(fun(value: Int) {
+    if(it == 3)return
+    
+    print(value)
+  }
+  print("done with anonymous function")
+}
+  
+fun main(){
+  foo()
+}
+//
+fun foo(){
+  run loop@{
+  listOf(1,2,3,4,5).forEach{
+    if(it == 3)return@loop
+    print(it)
+  }
+  }
+  
+  print("done with nested loop")
+}
+
+fun main(){
+  foo()
+}
+//
+return @a 1
+// //
+ fun main(){
+   throw Exception("Hi There!")
+ }                           
+      //
+      try{
+        
+      }catch(e:SomeException){
+        
+      }finally{
+        
+      }
+      //
+      val a: Int? = try {input.toInt()} catch(e: NumberFormatException){null}
+      //
+      Appendable append(CharSequence csq) throws IOException;
+
+//
+    try{
+      log.append(message)
+    }catch(IOException e){
+      
+    }
+    //
+    val s = person.name ?: throw IllegalArgumentException("Name required")
+
+    //
+    fun fail(message: String): Nothing{
+      throw IllegalArgumentException(message)
+    }
+     //
+     val s = person.name ? fail("Name required")
+     println(s)
+
+     //
+     val x = null
+                            val l= listOf(null)
+                            //
+                            fun printMessage()
+                            class Message
+
+
+                            //
+                            class Person
+                            class Empty
+                            class Person constructor(firstName: String)
+
+                            class Person(firstName: String)
+                            //
+                            class InitOrderDemo(name: String){
+                              val firstProperty = "First property: $name".also(::println)
+
+                              init{
+                                println("First initilizer block that prints $name")
+                              }
+
+                              val secondProperty = "Second property: ${name.length}".also(::println)
+
+                              init{
+                                println("Second initilizer block that prints ${name.length}")
+                              }
+                            }
+                            fun main()}{
+InitOrderDemo("hello")
+                              
+                            }
+                            //
+                            class Customer(name: String){
+                              val customerKey = name.uppercase()
+                            }
+                            //
+                            class Person(val firstName: String, val lastName: String, var age: Int)
+
+                            ///
+                            class Person(val firstName: String, val lastName: String, var isEmployed: Boolean = true)
+
+                            //
+                            class Person(
+                              val firstName : String,
+                              val lastName: String,
+                              val age: Int,
+
+                              
+                            )
+//
+class Customer public @Inject constructor (name: String)
+//
+class Person(val pets: MutableList<Pet> = mutableListOf())
+
+class Pet{
+  constructor(owner.Person){
+    owner.pets.add(this)
+  }
+}
+//
+class Person(val name: String){
+  val children: MutableList<Person> = mutableListOf()
+  constructor(name: String, parent: Person) : this(name){
+    parent.children.add(this)
+  }
+}
+//
+class Constructors{
+  init{
+    println("Init block")
+  }
+  constructor(i : Int){
+    println("Constructor $i")
+  }
+}
+fun main(){
+  Constructors(1)
+}
+
+//
+class DontCreateMe private constructor()
+//
+class Customer(val customerName: String = "")
+// 
+388/1299
+val invoice = Invoice()
+val customer = Customer("Joe Smith")
+//
+abstract class Polygon{
+abstract fun draw()  
+}
+
+class Rectangle: Polygon(){
+
+  override fun draw(){
+    }
+}
+// 
+
+open class Polygon{
+  open fun draw(){
+    
+  }
+}
+
+//
+     abstract class WildShape : Polygon()[{
+       
+     abstract override fun draw()
+     }
+     //
+     class Example
+
+    open class Base
+
+                                          open class Base(p: Int)
+
+                                          class Derived(p: Int) : Base(p)
+ //
+ class MyView : View{
+   constructor (ctx: Context) : super(ctx)
+
+   constructor(ctx: Context, attrs: AttributeSet) : super(ctx, attrs)
+ }
+ //
+ open class Shape{
+   open fun draw()
+   fun fill()
+ }
+
+ class Circle(): Shape(){
+   override fun draw()
+ }
+ //
+ open class Rectangle(): Shape()[{
+ final override fun draw(){}  
+ }
+
+ //
+ open class Shape{
+   open val vertexCount: Int = 0
+ }
+ class Rectangle : Shape(){
+   override val vertexCount  =4
+   }
+ //
+ interface Shape{
+   val vertexCount: Int
+ }
+ class Rectangle(override val vertexCount: Int = 4 ): Shape
+
+                                 class Polygon: Shape{
+                                   override var vertexCount: Int = 0
+                                 }
+                                 //
+                                 open class Base(val name: String){
+                                   init{println("Initializing a base class")}
+
+                                   open val size: Int = 
+                                  name.length.also{println("Initializing size in the base class: $it")}
+ }
+class Derived(
+
+  name: String,
+  val lastName: String,
+  
+) : Base(name.replaceFirstChar{it.uppercase()}.also{println("Argument for the base class: $it")}){
+  
+init{println("Initializing a derived class")}
+
+                                 override val size: Int = 
+  (super.size + lastName.length).also{println("Initializing size in derived class: $it")}
+}
+
+fun main(){
+  println("Constructing the derived class(\"hello\", \"world\")")
+  Derived("hello", "world")
+}
+//
+open class Rectangle{
+  open fun draw(){
+    println("Drawing a rectangle")
+  }
+  val borderColor: String get() = "black"
+}
+
+class FilledRectangle : Rectangle(){
+  override fun draw(){
+    super.draw()
+    println("Filling the rectangle")
+  }
+  val fillColor: String get() = super.borderColor
+}
+//
+open class Rectangle{
+  open fun draw(){println("Drawing a rectangle")}
+  val borderColor: String get() = "black"
+}
+
+class FilledRectangle: Rectangle(){
+  override fun draw(){
+    val filler = Filler()
+    filler.drawAndFill()
+  }
+  inner class Filler{
+    fun fill(){println("Filling")}
+    fun drawAndFill(){
+      super@FilledRectangle.draw()
+      fill()
+      println("Drawn a filled rectangle with color ${super@FilledRectangle.borderColor}")
+    }
+  }
+}
+fun main(){
+  val fr = FilledRectangle()
+  fr.draw()
+}
+//
+open class Rectangle{
+  open fun draw()
+}
+
+interface Polygon{
+  fun draw()
+}
+class Square() : Rectangle(), Polygon{
+  override fun draw()[{
+  super<Rectangle>.draw()
+  super<Polygon>.draw()
+  }
+
+}
+//
+class Address{
+  val name: String = "Holmes, Sherlock"
+  val street: String = "Baker"
+  val city: String = "London"
+  var state: String? = null
+  var zip: String = "123456"
+}
+//
+fun copyAddress(address: Address): Address{
+  val result = Address()
+  result.name = address.name
+  result.street = address.street
+
+  return result
+}
+//
+var <propertyName>[: <PropertyType>] [= <property_initializer>]
+                      [<getter>]
+                      [<setter>]
+
+                      //
+                      var initialized = 1
+
+                      val simple: Int?
+      val inferredType = 1
+
+                      //
+                      class Rectangle(val width: Int, val height: Int){
+                        val area: Int
+                        get() = this.width* this.height
+                      }
+
+                      fun main(){
+                        val rectangle = Rectangle(3,4)
+                        println("Width=${rectangle.width}, height${rectangle.height}, area=${rectangle.area}")
+                        
+                      }
+                      //
+  393
+ val area get() = this.width * this.height
+
+                      var stringRepresentation: String
+                      get() = this.toString()
+                      set(value)
+                      {
+                        setDataFromString(value)
+                      }
+                      //
+                      var setterVisibility: String = "abc"
+
+                    private set
+
+                      var setterWithAnnotation: Any? = null
+                      @Inject set
+                      //
+                      var counter = 09
+                      set(value){
+                        if(value >= 0)
+                        field = value
+                      }
+
+                      //
+                      val isEmpty: Boolean
+                      get()= this.size == 0
+
+                      private var _ table: Map<String, Int>? = null
+                      public  val table: Map<String, Int>
+      get(){
+        if(_table == null){
+          _table = HashMap()
+        }
+        return _table ?:throw AssertionError("Set to null by another thread")
+      }
+      //
+      const val SUBSYSTEM_DEPRECATED: String = "This sybsystem is deprecated"
+
+                      @Deprecated(SUBSYSTEM_DEPRECATED) fun foo(){}
+                      //
+                      public class MyTest{
+                        lateinit var subject: TestSubject
+
+                        @SetUp fun setup(){
+                          subject.method()
+                        }
+                      }
+                      //
+                      if(foo::bar.isInitialized){
+                        println(foo.bar)
+                      }
+                      //
+                      interface MyInterface{
+                        fun bar()
+                        fun foo()
+                      }
+                      {
+                        
+                      }
+
+                      ///
+                      class Child : MyInterface{
+                        override fun bar(){
+                          
+                        }
+                      }
+
+                      //
+                      interface MyInterface{
+                        val prop: Int
+
+                        val propertyWithImplementation: String
+                        get() = "foo"
+
+                        fun foo(){
+                          print(prop)
+                        }
+                      }
+
+                      class Child :MyInterface{
+                        override val prop: Int = 29
+                      }
+                      //
+                      interface Named{
+                        val name:String
+                      }
+                      interface Person: Named{
+                        val firstName: String
+                        val lastName: String
+
+                        override val name: String get() = "$firstName $ lastName"
+                      }
+
+                      data class Employee(
+  override val firstName: String,
+                  override val lastName: Stirng,
+                        val position: Position
+                        
+                      ):Person
+                      //
+ interface A{
+   
+ fun foo() {print("A")}
+ fun bar()
+ }        
+
+ interface B{
+   fun foo() {print("B")}
+    fun bar(){print("bar")}
+ 
+ }
+ class C: A{
+   override fun bar() {print("bar")}
+ }
+ class D: A, B{
+   override fun foo(){
+     super<A>.foo()
+     super<B>.foo()
+   }
+   override fun bar(){
+     super<B>.bar()
+   }
+ }
+ //
+ fun interface KRunnable{
+   fun invoke()
+ }
+
+ fun interface IntPredicate{
+ fun accept(i:Int): Boolean  
+ }
+
+ //
+ val isEven = object :IntPredicate{
+   override fun accept(i : Int): Boolean{
+     return i % 2 ==0
+   }
+ }
+ //
+ val isEven = IntPredicate {it % 2 == 0}
+
+ // 
+ fun interface IntPredicate{
+   fun accept(i: Int): Boolean
+ }
+ val isEven = Intpredicate{it % 2 == 0}
+ fun main(){
+   println("Is 7 even? - ${isEven.accept(7)}")
+ }
+ //
+ interface Printer{
+   fun print()
+   
+ }
+ fun Printer(block: () -> Unit): Printer = object: Printer{override fun print() = block()}
+
+ //
+ fun interfacec Printer{
+   fun print()
+ }
+
+ //
+ documentStorage.addPrinter(::Printer)
+
+ @Deprecated(message = "Your message about the deprecation", level = DeprecationLevel.HIDDEN)
+ fun Printer(..){..}
+ //
+ typealias IntPredicate = (i : Int) -> Boolean
+
+                      val isEven: IntPredicate = {it% 2 == 0}
+
+                      fun main(){
+                        println("Is 7 even? - ${isEven()7}")
+                      }
+                      //
+                      fun baz()
+                      class Bar
+
+                      //
+                      private fun foo()
+
+                      public var bar: Int = 5
+
+                      private set
+                      internal val baz = 6
+                      //
+   open class Outer{
+     private val a = 1
+     protected open val b = 2
+     internal open val c = 3
+     val d = 4
+
+     protected class Nested{
+       public val e: int = 5
+       
+     }
+   }   
+   class Subclass: Outer(){
+
+     override val b = 5
+     override val c = 7
+     
+   }
+   class Unrelated(o: Outer){
+     
+   }
+   //
+   class C private constructor(a: Int){}
+   //
+   fun MutableList<Int>.swap(index1: Int, index2:Int){
+     val tmp = this[index1]
+     this[index1] = this[index2]
+     this[index2] = tmp
+   }
+
+   //;
+   val list = mutableListOf(1,2,3)
+   list.swap(0,2)
+
+   //
+   fun <T> MutableList<T>.swap(index1: Int, index2:Int){
+     val tmp = this[index1]
+     this[index1] = this[index2]
+     this[index2] = tmp
+   }
+   //
+   fun main(){
+     open class Shape
+     class Rectangle: Shape()
+
+     fun Shape.getName() = "Shape"
+     fun Rectangle.getName() + "Rectangle"
+
+     fun printClassName(s: Shape){
+       println(s.getName())
+     }
+     printClassName(Rectangle())
+   }
+   //
+   fun main(){
+     class Example{
+       fun printFunctionType(){println("Class method")}
+     }
+     fun Example.printFunctionType(){println("Extension function")}
+   
+   Example().printFunctionType()
+   }
+   //
+   fun main(){
+     class Example{
+       fun printFunctionType(){println("Class method")}
+     }
+     fun Example.printFunctionType(1)
+   }
+   //
+   fun Any?.toString():String{
+     if(this == null) return "null"
+
+     return toString()
+   }
+
+   //
+   val <T> List<T>lastIndex: Int
+                      get() =size -1
+                      //
+   val House.number = 1
+
+                      class MyClass{
+                        companion object{}
+                      }
+
+                      fun MyClass.Companion.printCompanion(){println("companion")}
+
+                      fun main(){
+                        MyClass.printCompanion()
+                      }
+                      //
+                      fun List<String>.getLongString()
+
+                      //
+                      fun main(){
+                        val list = listOf("red", "green","blue")
+                        list.getLongestString()
+                      }
+                      //
+                      class Host(val hostname: String){
+                        fun printHostName(){print(hostname)}
+                      }
+                      class Connection(val host:Host, val port: Int){
+                        fun printPort(){print(port)}
+                      
+                      fun Host.printConnectionString(){
+                        printHostname()
+                        print(":")
+                        printPort()
+                      }
+                      fun connect(){
+                        host.printConnectionString()
+                      }
+                      
+                      }
+
+                      fun main(){
+                        Connection(Host("kotl.in"),443).connect()
+                      }
+                      //
+                      class Connection{
+                        fun Host.getConnectionString(){
+                          toString()
+                          this.@Connection.toString()
+                        }
+                      }
+
+                      //
+open class Base{}
+
+class Derived : Base(){}
+
+open class BaseCaller{
+  open fun Base.printFunctionInfo(){
+    println("Base extension function in BaseCaller")
+  }
+
+open fun Derived.printFunctionInfo(){
+  println("Derived extension function in BaseCaller")
+}
+
+fun call(b:Base){b.printFunctionInfo()
+}
+}
+
+class DerivedCaller: BaseCaller(){
+override fun Base.printFunctionInfo(){
+  println("Base extension function in DerivedCaller")
+}
+override fun Derived.printFunctionInfo(){
+  println("Derived extension function in DerivedCaller")
+}
+  
+}
+fun main(){
+  
+BaseCaller().call(Base())
+DerivedCaller().call(Base())
+DerivedCaller().call(Derived())
+}
+//
+data class User(val name: String, val age : Int)
+//
+data class User(val name: String = " " , val age: Int = 0)
+
+data class Person(val name: String){
+  var age: Int = 0
+}
+
+//
+data class Person(val name: String){
+  var age: Int = 0
+}
+fun main(){
+  val person1 = Person("John")
+val person2 = Person("John")
+person1.age = 10
+  person2.age = 20
+
+  println("person1 == person2:  ${person1 == person2}")
+  println("person1 with age $ {person1.age}: $ {person1}")
+
+  println("person2 with age $ {person2.age}" $person2}")
+}
+//
+fun copy(name: String = this.name, age: Int = this.age) = User(name, age)
+
+val jack = User(name = "Jack", age = 1)
+val olderJack = jack.copy(age = 2)
+//
+val jane = User("Jane", 35)
+val (name, age) = jane
+
+          println("$name, $age years of age")
+          //
+          sealed interface Error
+
+          sealed class IOError(): Error
+
+
+          class FileReadError(val file: File ) : IOError()
+          class DatabaseError(val source: DataSource): IOError()
+
+          object RuntimeError : Error
+
+          //
+          sealed class IOError{
+            constructor()
+            private constructor(description: String): this()
+          }
+          //
+          sealed interface Error
+
+          sealed class IOError(): Error
+          open class CustomError():Error
+
+
+          fun log(e: Error) = when(e){
+            is FileReadError ->{println("Error while reading file ${e.file}")}
+            is DatabaseError ->{println("Error while reading from database ${e.source}")}
+            is RuntimeError ->{println("Runtime error ")}
+          }
+
+          //
+          class Box<T>(t: t){
+            var value = t
+
+          
+          var box : Box<Int>  = Box <Int> ( 1)
+
+          val box = Box(1)
+
+          List<String> strs = new ArrayList<String>();
+            List<Object>objs = strs;
+            objs.add(1);
+            String s = strs.get(0)
+            //
+
+            interface Collection<E>...{
+              void addAll(Collection<E> items);
+            }
+            //
+            void copyAll(Collection<Object>to, Collection<String> from){
+              to.addAll(from)
+              }
+            //
+            interface Collection<E>{
+              void addAll(Collection<?extends E> items);
+            }
+            //
+            interface Source<T>{
+              T nextT();
+            }
+
+            void demo(Source<String>strs){
+            Source<Object>objects = strs;  
+            }
+            //
+            interface Source<out T>{
+            fun nextT(): T  
+            }
+
+            fun demo(strs: Source<String>){
+            val objects : Source<Any> = strs  
+            }
+
+            //
+            interface Comparable<in T>{
+              operator fun compareTo(other: T): Int
+            }
+            fun demo(x: Comparable<Number>){
+            x.compareTo(1.0)
+
+            val y: Comparable<Double> = x
+              
+
+            }
+            //
+            class Array<T>(val size: Int){
+              operator fun get(index: Int): T
+              operator fun set(index: Int, value: T)
+            }
+
+            //
+            fun copy(from: Array<any, to: Array<Any>{
+              assert(from.size == to.size)
+              for(i in from.indices)
+              to[i] = from[i]
+            }
+
+            val ints: Array<Int = arrayOf(1,2,3)
+                     val any= Array<Any>(3){""}
+                     copy(ints, any)
+
+            //
+            fun copy(from: Arrau<out Any>, to:Array<Any>)
+            //
+            fun fill(dest: Array<in String>, value: String)
+
+            //
+            fun <T> singletonList(item: T): List<T>{
+              
+            }
+            fun <T> basicToString(): String{
+
+            }
+            //
+            val l = singletonList<Int>(1)
+            val l = singletonList(1)
+
+            //
+
+
+            fun <T : Comparable<T>> sort(list:List<T>)
+
+            sort(listOf(1,2,3))
+            sort(listOf(HashMap<Int, String>()))
+
+            //
+            fun <T> copyWhenGreater(list: List<T>, threshold: T):List<String>
+                where T : CharSequence,
+                     T : Comparable<T>{
+                       return list.filter{it > threshold}.map{it.toString9}
+                     }
+
+                     //
+                     public interface Game<T>{
+                       public T save(T x){}
+
+                       public T load(@NotNull T x){}
+                     }
+                     //
+                     interface ArcadeGame<T1>: Game<T1>{
+                       override fun save(x: T1): T1
+
+                       override fun load(x: T1 & Any): T1 &Any
+                     }
+                     //
+                     412/1299
